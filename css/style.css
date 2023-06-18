@@ -1,0 +1,90 @@
+a {
+  margin: 0px;
+  padding: 0px;
+}
+a:hover {
+  color: #060a0f;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #060a0f;
+}
+
+p {
+  color: #494949;
+}
+
+.transition, nav ul li a:after, nav ul li a:before, nav ul li a, nav ul .link-active a:after, nav ul, nav .logo img, a {
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.paddig-100 {
+  padding: 100px, 0px;
+}
+
+.center {
+  text-align: center;
+  margin: 0px auto;
+}
+
+nav {
+  border-bottom: 1px solid transparent;
+  padding: 10px 0px;
+  z-index: 100;
+  position: fixed;
+  width: 100%;
+}
+nav .logo img {
+  width: 100%;
+}
+nav ul {
+  padding: 0px;
+  margin: 0px;
+  margin-top: 10px;
+  text-align: right;
+}
+nav ul .link-active a {
+  color: #060a0f !important;
+}
+nav ul .link-active a:after {
+  width: 100%;
+  background-color: #060a0f;
+}
+nav ul li {
+  display: inline-block;
+  padding: 0px 10px;
+}
+nav ul li a {
+  position: relative;
+  text-decoration: none;
+  font-size: 16px;
+  color: #494949;
+}
+nav ul li a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: transparent;
+}
+nav ul li a:after {
+  content: "";
+  width: 0%;
+  height: 1px;
+  position: absolute;
+  top: 100%;
+  left: 0px;
+  background-color: transparent;
+}
+nav ul li a:hover {
+  text-decoration: none;
+}
+nav ul li a:hover:before {
+  width: 0%;
+  background-color: #060a0f;
+}
+nav ul li a:hover:after {
+  width: 100%;
+  background-color: #060a0f;
+}
