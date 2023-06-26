@@ -14,12 +14,13 @@ p {
   color: #494949;
 }
 
-.transition, nav ul li a:after, nav ul li a:before, nav ul li a, nav ul .link-active a:after, nav ul, nav .logo img, a {
+.transition, .seccion-img img, .boton-general:hover, nav ul li a:after, nav ul li a:before, nav ul li a, nav ul .link-active a:after, nav ul, nav .logo img, nav, a {
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
 
 .paddig-100 {
+  margin-top: 50px;
   padding: 100px, 0px;
 }
 
@@ -28,12 +29,33 @@ p {
   margin: 0px auto;
 }
 
+.alinear {
+  margin: 70px;
+  margin-top: 80px !important;
+}
+
 nav {
+  background-color: transparent;
   border-bottom: 1px solid transparent;
   padding: 10px 0px;
   z-index: 100;
   position: fixed;
   width: 100%;
+  z-index: 100;
+}
+nav:hover {
+  background-color: white;
+  border-bottom: rgba(6, 10, 15, 0.1);
+  padding: 25px 0px;
+}
+nav:hover .logo img {
+  width: 80%;
+}
+nav:hover ul {
+  margin-top: 3px;
+}
+nav:hover ul li a {
+  color: rgba(73, 73, 73, 0.5);
 }
 nav .logo img {
   width: 100%;
@@ -41,11 +63,12 @@ nav .logo img {
 nav ul {
   padding: 0px;
   margin: 0px;
-  margin-top: 10px;
+  margin-top: 5px;
   text-align: right;
 }
 nav ul .link-active a {
-  color: #060a0f !important;
+  text-transform: uppercase;
+  color: #060a0f;
 }
 nav ul .link-active a:after {
   width: 100%;
@@ -56,10 +79,11 @@ nav ul li {
   padding: 0px 10px;
 }
 nav ul li a {
+  text-transform: uppercase;
   position: relative;
   text-decoration: none;
   font-size: 16px;
-  color: #494949;
+  color: rgba(255, 255, 255, 0.8);
 }
 nav ul li a:before {
   content: "";
@@ -87,4 +111,37 @@ nav ul li a:hover:before {
 nav ul li a:hover:after {
   width: 100%;
   background-color: #060a0f;
+}
+
+.boton-general {
+  width: 170px;
+  height: 35px;
+  border: 1px solid #060a0f;
+  background-color: #ffffff;
+}
+.boton-general:hover {
+  background-color: rgba(6, 10, 15, 0.9);
+  color: rgba(255, 255, 255, 0.8);
+}
+
+#slider {
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -o-clip-path: polygon(100% 0%, 100% 100%, 50% 80%, 0% 100%, 0% 0%);
+  -webkit-clip-path: polygon(100% 0%, 100% 100%, 50% 80%, 0% 100%, 0% 0%);
+  clip-path: polygon(100% 0%, 100% 100%, 50% 80%, 0% 100%, 0% 0%);
+}
+
+#seccion-rop {
+  text-align: justify;
+}
+
+.seccion-img img {
+  -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+          clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  width: 350px;
+}
+.seccion-img img:hover {
+  -webkit-clip-path: polygon(100% 0%, 100% 100%, 0% 100%, 0% 0%);
+          clip-path: polygon(100% 0%, 100% 100%, 0% 100%, 0% 0%);
 }

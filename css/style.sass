@@ -30,18 +30,41 @@ p
     transition: all 0.5s ease-in-out
 
 .paddig-100
+    margin-top: 50px
     padding: 100px, 0px 
 
 .center
     text-align: center
     margin: 0px auto
 
+.alinear
+    margin: 70px
+    margin-top: 80px !important
+
 nav 
+    background-color: transparent
     border-bottom: 1px solid transparent
     padding: 10px 0px
     z-index: 100
     position: fixed
     width: 100%
+    z-index: 100
+    @extend .transition 
+    // animacion de la barra de navegacion
+    &:hover
+        background-color: white
+        border-bottom: transparentize($base, .9)
+        padding: 25px 0px
+        .logo
+            img
+                width: 80%
+        ul 
+            margin-top: 3px
+            li 
+                a
+                    color: $text 
+    
+    ///////////////////////////////////////
     .logo
         img
             width: 100%
@@ -50,13 +73,14 @@ nav
     ul
         padding: 0px 
         margin: 0px 
-        margin-top: 10px 
+        margin-top: 5px 
         text-align: right
         // float: right 
         @extend .transition
         .link-active
             a
-                color: $base !important
+                text-transform: uppercase
+                color: $base 
                 &:after
                     width: 100%
                     background-color: $base
@@ -66,10 +90,11 @@ nav
             display: inline-block
             padding: 0px 10px 
             a 
+                text-transform: uppercase
                 position: relative
                 text-decoration: none
                 font-size: 16px
-                color: $segundario
+                color: transparentize(white,.2)
                 @extend  .transition
                 &:before
                     content: ""
@@ -98,8 +123,34 @@ nav
                     &:after
                         width: 100%
                         background-color: $base
-                        
 
-                        
+.boton-general
+    width: 170px
+    height: 35px
+    border: 1px solid $base
+    background-color: #ffffff
+    &:hover
+        @extend .transition
+        background-color: transparentize($base, .1)
+        color: transparentize(white, .2)
+/////////////////////////////////////////////                        
+// ESTILOS DE SLIPPRY
+/////////////////////////////////////////////
 
+#slider
+    backface-visibility: hidden
+    -o-clip-path:  polygon(100% 0%, 100% 100%, 50% 80%, 0% 100%, 0% 0%)
+    -webkit-clip-path:  polygon(100% 0%, 100% 100%, 50% 80%, 0% 100%, 0% 0%)
+    clip-path: polygon(100% 0%, 100% 100%, 50% 80%, 0% 100%, 0% 0%)
+
+
+#seccion-rop
+    text-align: justify
                     
+.seccion-img
+    img
+        @extend .transition
+        &:hover
+            clip-path: polygon(100% 0%, 100% 100%, 0% 100%, 0% 0% )
+        clip-path: polygon(50% 0%,100% 50%, 50% 100%, 0% 50%)
+        width: 350px

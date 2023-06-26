@@ -15,6 +15,10 @@
 
     <!-- Favicon -->
     <link rel="icon" href="favicon/espadas.icon">
+
+    <!-- slider slippry -->
+    <link rel="stylesheet" href="css/slippry.css">
+    
 </head>
 <body>
     <!-- Inicio Barra de navegación -->
@@ -22,13 +26,13 @@
         <div class="container-fluid">
             <div class="row">
                 <!-- Logotipo -->
-                <div class="col-lg-3">
+                <div class="col-xl-2">
                     <a href="index.html" class="logo">
                         <img src="img/logo.svg" alt="">
                     </a>
                 </div>
                 <!-- Enlaces -->
-                <div class="col-lg-9">
+                <div class="col-xl-10">
                     <ul>
                         <li class="link-active"><a href="index.html">Inicio</a></li>
                         <li><a href="">Nosotros </a></li>
@@ -40,8 +44,110 @@
         </div>
     </nav>
     <!-- Fin Barra de navegación -->
+
+    <!-- Inicio de slider -->
+    <section id="slider">
+        <ul id="slippry-carrusel">
+            <li>
+                <img src="img/slide_01.jpg" alt=""> 
+            </li>
+            <li>
+                <img src="img/slide_02.jpg" alt=""> 
+            </li>
+            <li>
+                <img src="img/slide_03.jpg" alt=""> 
+            </li>
+        </ul>
+    </section>
+    <!-- Fin de slider -->
+
+    <!-- inicio de nosotros -->
+    <div class="paddig-100" id="nosotros">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 center">
+                    <h1>SOBRE NOSOTROS</h1>
+                </div>
+                <div class="d-flex aling-items-center alinear">
+                    <div class="col-xl-6">
+                
+                    </div>
+                    <div class="col-xl-6">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                            Excepturi similique reiciendis illo ex iste omnis veniam molestias. 
+                            Nihil, aliquam in.
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt, ratione.
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident aspernatur officia eligendi voluptate in a quaerat ratione. Cum facilis eos officiis, saepe sequi animi eligendi molestias quibusdam! Id, repudiandae natus.
+                        </p>
+                        <button class="boton-general">CONTÁCTENOS</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- fin de nosotros -->
+
+    <!-- rombos inicio -->
+    <section>
+        <div class="container">
+            <div class="row" id="seccion-rop">
+                <div class="col-4">
+                    <div class="col-12">
+                        <figure class="seccion-img">
+                            <img src="img/square_01.jpg" alt="" class="rounded-circle">
+                        </figure>
+                    </div>
+                    <div class="col-12">
+                        <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem labore delectus doloremque voluptatibus doloribus magnam ad dolorum vitae, quas modi.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="col-12">
+                        <figure class="seccion-img">
+                            <img src="img/square_02.jpg" alt="" class="rounded-circle">
+                        </figure>
+                    </div>
+                    <div class="col-12">
+                        <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem labore delectus doloremque voluptatibus doloribus magnam ad dolorum vitae, quas modi.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="col-12">
+                        <figure class="seccion-img">
+                            <img src="img/square_10.jpg" alt="" class="rounded-circle">
+                        </figure>
+                    </div>
+                    <div class="col-12">
+                        <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem labore delectus doloremque voluptatibus doloribus magnam ad dolorum vitae, quas modi.
+                        </p>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- rombos fin -->
+
+    <!-- <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script> -->
+    <script src="js/jquery-3.6.4.min.js"></script>
+    <script src="js/slippry.min.js"></script>
     <script src="bootstrap/js/bootstrap.bundle.js"></script>
     <script src="bootstrap/js/bootstrap.js"></script>
     <script src="js/main.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#slippry-carrusel').slippry({
+                captions: true,
+                pager: false,
+            })
+        });
+    </script>
 </body>
 </html>
